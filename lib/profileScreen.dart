@@ -79,68 +79,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
-  void editProfile() {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return Container(
-          child: Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Column(
-              children: <Widget>[
-                Divider(
-                  height: 12.0,
-                  thickness: 2.0,
-                ),
-                Text(
-                  'Editar perfil',
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Cambiar nombre',
-                  ),
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Cambiar nombre de usuario',
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Solicitar cambio de email
-                  },
-                  child: Text('Solicitar cambio de email'),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Solicitar cambio de contraseña
-                  },
-                  child: Text('Solicitar cambio de contraseña'),
-                ),
-                Spacer(),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                    ),
-                    onPressed: () {
-                      // Guardar cambios
-                    },
-                    child: Text('Guardar cambios'),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-
   Future<void> deleteUser(BuildContext context) async {
     showDialog(
       context: context,
